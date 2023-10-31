@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Mental Health Survey</title>
+</head>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://i.ibb.co/vjzvCB8/CCdark.jpg); /* Specify the path to your logo image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-image: url(https://i.ibb.co/M82vKRJ/mentaltree.jpg);
+            background-size: cover;
+            background-repeat: no-repeat; background-attachment: fixed;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.5;
+            padding: 20px;
+            box-shadow: 0 10px rgba(0, 0, 0, 0.1); border-radius: 20px;
+            opacity: 0.95;
+        }
+        h1 {
+            color: #13e239;
+            text-align: center;
+        }
+        p {
+            color: #f2f2f2;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="radio"], select, textarea {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="number"] {
+            width: 20%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: right;            
+        }
+        input[type="radio"] {
+            width: auto;
+            padding: 10px;
+        }
+        button {
+            background-color: #4d2600;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4d2600;
+        }        
+        p {
+            color: #ffffff;
+            outline-style: double;
+        }
+        h2 {
+           text-align: center;       
+        }
+        h3 {
+           text-align: center;        
+        }
+        h4 {
+           text-align: center;
+           color: #ffffff;
+           font-size: large;
+           outline-style: double;
+        }
+        h5 {
+            font-size: large;
+            color: #ffffff;
+        }
+        input[type1="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type1="number"] {
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        select[name="age"] {
+            width: 10%;
+            padding: 10px;
+        }
+        * {
+            font-weight: bold;
+            opacity: 5;
+        }
+    </style>
+    <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyH0UybNlNYwdFWtT_LZSEFqp-siE6qju0L1fu72cVSHK11YycDO-35y3MpoTLIlVKQVA/exec'
+
+        const form = document. forms['Mental Health Survey Form']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your form is submitted successfully." ))
+            .then(() => { window. location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <div class="container">
+        <img
+        align="left" 
+        src="https://i.ibb.co/ZxsFxWM/DEPED.png" 
+        alt="Logo" 
+        width="100" 
+        height="100" 
+        >
+        <img 
+        src="https://i.ibb.co/qs8DDrQ/CClogo.png" 
+        alt="Logo" 
+        width="100" 
+        height="100" 
+        align="right"
+        > 
+        <form method="post" action="https://script.google.com/macros/s/AKfycbyH0UybNlNYwdFWtT_LZSEFqp-siE6qju0L1fu72cVSHK11YycDO-35y3MpoTLIlVKQVA/exec" name="Mental Health Survey Form">
+        <h3><small>Republic of the Philippines<br>
+        Province of Bulacan</small><br>
+        CITY OF SAN JOSE DEL MONTE<br>
+        <font size="6">City College of San Jose del Monte</font><br>
+        <a href="https://ccsjdm.edu.ph/about-us/contact/"><small> No. 0917 832 2130 Email: ccsjdm@yahoo.com</small></a></h3><hr>
+        <h1>Mental Health Survey</h1>
+         <h4>"Small Steps are also Progress"</h4>
+        <p class="double"><i>Before doing anything, kindly fill out this form only if you're willing to reveal your identity or not if you prefer to stay anonymous:</i></p>
+            <font size="3" color="#ffffff">Name:<br>
+            <input type="text" placeholder="Name" name="Name: "><br>
+            Sex:
+            <input type="radio" name="Sex: " value="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="Sex: " value="female" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="Sex: " value="X" id="X">
+            <label for="Rather">Rather not say</label><br>
+            Select your age:<br>
+            <select name="Age: ">
+                <option value="age">Age</option>
+                <option value="under18">15-18</option>
+                <option value="18to24">18-24</option>
+                <option value="25to34">25-30</option>
+                <option value="35to44">31-40</option>
+            </select><br>
+            Contact number:<br>
+            <input type="number" placeholder="Cellphone Number" name="Cell Number: "><br>
+            E-mail:<br>
+            <input type="text" placeholder="@gmail.com" name="Email Address: "><br>
+            Strand:<br>
+            <select name="Strand: ">
+            <option value="Strand">Strand</option>
+                <option value="TVL-ICT">TVL-ICT</option>
+                <option value="HUMMS">HUMMS</option>
+                <option value="ABM">ABM</option>
+                <option value="GAS">GAS</option>
+        </select>
+            <br>
+            <textarea placeholder="Share any thoughts or experiences related to mental health (optional)" name="Story: " rows="4"></textarea></font>
+            </div>
+            <br>
+            <div class="container">            
+            <h1>Mental Health Survey Questions</h1>
+            <p>Greetings~ I hope you are well!<br>
+            First, a very big thank you for agreeing to respond to this survey.<br>
+        This survey form intends to discover such things about you, specifically things about your mental wellness. 
+        Note that you should answer this survey solely for the reason of potential distractions, obstructions, and temptations from your surroundings that might affect your answer. 
+        I look forward to your honest responses and answers without the influence of distractions around you. 
+        Good luck and God bless you on your journey answering this survey.</p>
+        <form>
+            <h4>1-5: YES or NO Questions</h4>
+                <h5>1. Do you have an interest in socializing? <br>
+        <dd><input type="radio" name="1. Answer" value="Yes">
+        Yes <br>
+        <input type="radio" name="1. Answer" value="No">
+        No </dd><br>
+                2. Are you more likely to feel bad about consequences that aren't your fault?<br>
+        <dd><input type="radio" name="2. Answer" value="Yes">
+        Yes <br>
+        <input type="radio" name="2. Answer" value="No">
+        No </dd><br>
+                3. You prefer staying home rather than going out with groups of people?<br>
+        <dd><input type="radio" name="3. Answer" value="Yes">
+        Yes <br>
+        <input type="radio" name="3. Answer" value="No">
+        No </dd><br>
+                4. Tends to look at the positive side of everything?<br>
+        <dd><input type="radio" name="4. Answer" value="Yes">
+        Yes <br>
+        <input type="radio" name="4. Answer" value="No">
+        No </dd><br>
+                5. Being involved in a big crowd makes you feel uncomfortable.<br>
+        <dd><input type="radio" name="5. Answer" value="Yes">
+        Yes <br>
+        <input type="radio" name="5. Answer" value="No">
+        No </dd></h5><br>
+            <h4>6-10: Statement-based questions</h4>
+                <h5>6. What's your most effective coping mechanism in tough times?<br>
+                Such as: <br>
+        <dd><input type="text" name="6. Answer" size="200" placeholder="Answer:" required></dd>
+                7. How do you approach a problem?<br>
+                How: <br>
+        <dd><input type="text" name="7. Answer" size="200" placeholder="Answer:" required></dd>
+                8. How well do you react to negative occurrences in your life?<br>
+                Explain:<br>
+        <dd><input type="text" name="8. Answer" size="200" placeholder="Answer:" required></dd>
+                9. Do you tend to procrastinate on tasks like school-related activities and household chores? <br>
+                Why: <br>
+        <dd><input type="text" name="9. Answer" size="200" placeholder="Answer:" required></dd>
+                10. Have you been sleeping without any obstructions, basically being able to sleep easily? <br>
+                How: <br>
+        <dd><input type="text" name="10. Answer" size="200" placeholder="Answer:" required></dd></font>              
+            <h4>11-15: Scaling</h4>
+                <h5>11. When rated from 1 to 5, How well do you manage unforeseen changes to your plans? <br>
+        <label> 
+            <dd>Choose:
+            <select name="11. Answer">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </label></dd><br>
+                12. In a scale of 1 to 10. How would you rate your ability to solve complicated occurrences in your life? <br>
+        <label> 
+            <dd>Choose:
+            <select name="1. Answer">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </label></dd><br>
+                13. Rate how you accept your mistakes in life, then move on. <br>
+        <label> 
+            <dd>Choose:
+            <select name="13. Answer">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </label></dd><br>
+                14. On a scale of 1–5, how well can you manage your piled-up tasks? <br>
+                <label> 
+            <dd>Choose:
+            <select name="14. Answer">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>               
+            </select>
+        </label></dd><br>
+                15. How would you rate your socializing skills? <br>
+        <label> 
+            <dd>Choose:
+            <select name="15. Answer">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </label></dd></label><br>
+            <h4>16-20: Select Options</h4>
+                <h5>16. What do you do whenever you feel lonely? <br>
+                <dd><input type="checkbox" name="16. I distract myself by watching random videos." value="/">
+                I distract myself by watching random videos. <br>
+                <input type="checkbox" name="By playing online games." value="/">
+                By playing online games. <br>
+                <input type="checkbox" name="Meditation" value="/">
+                Meditation <br>
+                <input type="checkbox" name="Reading books" value="/">
+                Reading books <br>
+                <input type="checkbox" name="Eating" value="/">
+                Eating <br>
+                <input type="checkbox" name="Please Specify :" value="/">
+                Others: <input type="text" name="Others: " placeholder="Please specify"></dd><br>
+                17. If there's a really difficult problem that's in front of you right now, what will you do? <br>
+                <dd><input type="checkbox" name="17. I will face it head-on." value="/"> 
+                I will face it head-on. <br>
+                <input type="checkbox" name="Just going to ignore it. " value="/"> 
+                Just going to ignore it. <br>
+                <input type="checkbox" name="I will go with the flow." value="/"> 
+                I will go with the flow. <br>
+                <input type="checkbox" name="I will proceed with questioning my abilities." value="/"> 
+                I will proceed with questioning my abilities. <br>
+                <input type="checkbox" name="Get help from people who're close to me." value="/"> 
+                Get help from people who're close to me. <br>
+                <input type="checkbox" name="Please Specify :" value="/">
+                Others: <input type="text" name="Others:" placeholder="Please specify"></dd><br>
+                18. When you have an undiscussed problem with your friends, what do you do? <br>
+                <dd><input type="checkbox" name="18. I will directly talk to my friend about it" value="/">
+                I will directly talk to my friend about it <br>
+                <input type="checkbox" name="Ignores the problem" value="/">
+                Ignores the problem <br>
+                <input type="checkbox" name="Let my friend do the first move" value="/">
+                Let my friend do the first move <br>
+                <input type="checkbox" name="Will probably jump to conclusions of losing my friend" value="/">
+                Will probably jump to conclusions of losing my friend <br>
+                <input type="checkbox" name="Would blame myself" value="/">
+                Would blame myself  <br>
+                <input type="checkbox" name="Others:" value="/">
+                Others: <input type="text" name="Please Specify :" placeholder="Please specify"></dd>
+                                19. What's your next step after you have a fight with someone whose close to you? <br>
+                <dd><input type="checkbox" name="19. I will be the bigger person and talk to them first." value="/"> 
+                I will be the bigger person and talk to them first. <br>
+                <input type="checkbox" name="I will let a few days pass before having closure. " value="/"> 
+                I will let a few days pass before having closure. <br>
+                <input type="checkbox" name="Not be the one who will apologize first." value="/"> 
+                Not be the one who will apologize first. <br>
+                <input type="checkbox" name="I will apologize and let things flow." value="/"> 
+                I will apologize and let things flow. <br>
+                <input type="checkbox" name="Consult other close ones on what I should do next." value="/"> 
+                Consult other close ones on what I should do next. <br>
+                <input type="checkbox" name="Please Specify :" value="/">
+                Others: <input type="text" name="Others:" placeholder="Please specify"></dd><br>
+                20. What do you do when you experience symptoms of potential mental illness?
+                <dd><input type="checkbox" name="20. Go open up to my friends about it." value="/"> 
+                Go open up to my friends about it. <br>
+                <input type="checkbox" name="Open up to my parents. " value="/"> 
+                Open up to my parents. <br>
+                <input type="checkbox" name=" will reach out to a psychologist." value="/"> 
+                 will reach out to a psychologist. <br>
+                <input type="checkbox" name="Watches TikTok videos and assumes that it's already depression." value="/"> 
+                Watches TikTok videos and assumes that it's already depression. <br>
+                <input type="checkbox" name="I'm just going to ignore it and continue living." value="/"> 
+                I'm just going to ignore it and continue living. <br>
+                <input type="checkbox" name="Please Specify :" value="/">
+                Others:<input type="text" name="Others:" placeholder="Please specify"></dd></h5>
+                <h4>Thank you for responding to this survey. <br>
+                We hope that you are well! <br>
+                Always remember that your feelings are valid, and God will always be inside your heart.</h4><br>
+        <button type1="submit">Submit</button>
+	    <button type1="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
